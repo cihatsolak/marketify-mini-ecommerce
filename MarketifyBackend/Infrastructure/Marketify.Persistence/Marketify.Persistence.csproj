@@ -14,4 +14,8 @@
     <ProjectReference Include="..\..\Core\Marketify.Application\Marketify.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contexts\" />
+  </ItemGroup>
+
 </Project>
