@@ -12,7 +12,7 @@
                 options.UseNpgsql(configuration.GetConnectionString(nameof(MarketifyDbContext)));
             });
 
-            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductService, ReadRepository>();
         }
     }
 }
