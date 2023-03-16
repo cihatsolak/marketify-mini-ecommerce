@@ -1,4 +1,4 @@
-namespace MarketifyBackend
+namespace Marketify.API
 {
     public class WeatherForecast
     {

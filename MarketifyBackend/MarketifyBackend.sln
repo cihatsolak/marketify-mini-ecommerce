@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketifyBackend", "MarketifyBackend.csproj", "{AE5D6046-55AD-4C9C-8F1A-1D4A5E059147}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketify.Domain", "Core\Marketify.Domain\Marketify.Domain.csproj", "{382881D8-D02C-4599-95C7-E6112CB01AF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AE5D6046-55AD-4C9C-8F1A-1D4A5E059147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE5D6046-55AD-4C9C-8F1A-1D4A5E059147}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE5D6046-55AD-4C9C-8F1A-1D4A5E059147}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE5D6046-55AD-4C9C-8F1A-1D4A5E059147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{382881D8-D02C-4599-95C7-E6112CB01AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{382881D8-D02C-4599-95C7-E6112CB01AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{382881D8-D02C-4599-95C7-E6112CB01AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{382881D8-D02C-4599-95C7-E6112CB01AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AB1486E2-E612-41B0-93E8-A2C5265A5CF3}
+		SolutionGuid = {3082A9EF-3EC4-47CD-A240-A71F85FB9F53}
 	EndGlobalSection
 EndGlobal
