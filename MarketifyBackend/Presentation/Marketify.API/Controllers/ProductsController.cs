@@ -23,7 +23,7 @@ namespace Marketify.API.Controllers
             await _productWriteRepository.AddAsync(new Product
             {
                 Name = "Test",
-                Price = 1,
+                Price = 123.23m,
                 Stock = 2,
                 CreatedDate = DateTime.UtcNow
             });
