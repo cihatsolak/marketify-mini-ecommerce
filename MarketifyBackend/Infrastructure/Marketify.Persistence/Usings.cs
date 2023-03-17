@@ -4,6 +4,7 @@ global using Marketify.Domain.Entities;
 global using Marketify.Domain.Entities.Common;
 global using Marketify.Persistence.Contexts;
 global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.ChangeTracking;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 global using System.Linq.Expressions;

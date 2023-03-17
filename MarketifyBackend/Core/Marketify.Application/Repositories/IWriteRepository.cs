@@ -2,12 +2,12 @@
 {
     public interface IWriteRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
-        Task<bool> AddAsync(TEntity entity);
-        Task<bool> AddRangeAsync(List<TEntity> entities);
-        bool Update(TEntity model);
-        Task<bool> RemoveAsync(string id);
-        bool Remove(TEntity entity);
-        bool RemoveRange(List<TEntity> entities);
+        Task AddAsync(TEntity entity);
+        Task AddRangeAsync(List<TEntity> entities);
+        void Update(TEntity entity);
+        Task RemoveAsync(string id);
+        void Remove(TEntity entity);
+        void RemoveRange(List<TEntity> entities);
         Task<int> SaveAsync();
     }
 }

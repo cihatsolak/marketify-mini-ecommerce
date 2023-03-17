@@ -28,14 +28,15 @@
             return query;
         }
 
-        public async Task<TEntity> GetSingleAsync(Expression<Func<TEntity, bool>> method, bool tracking = true)
+        public async Task<TEntity> GetSingleAsync(Expression<Func<TEntity, bool>> predicate, bool tracking = true)
         {
             var query = Table.AsQueryable();
             if (!tracking)
                 query = Table.AsNoTracking();
 
-            return await query.FirstOrDefaultAsync(method);
+            return await query.FirstOrDefaultAsync(predicate);
         }
+
         public async Task<TEntity> GetByIdAsync(string id, bool tracking = true)
         {
             var query = Table.AsQueryable();
