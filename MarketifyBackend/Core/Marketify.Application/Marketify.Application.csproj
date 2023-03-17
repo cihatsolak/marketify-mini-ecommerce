@@ -14,10 +14,4 @@
     <ProjectReference Include="..\Marketify.Domain\Marketify.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\Customer\" />
-    <Folder Include="Repositories\Product\" />
-    <Folder Include="Repositories\Order\" />
-  </ItemGroup>
-
 </Project>
