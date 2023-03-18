@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BasketsComponent } from './baskets.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-const routes: Routes = [
-  { path: '', component: BasketsComponent }
-]
+
 
 @NgModule({
   declarations: [
@@ -13,7 +11,9 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild([
+      { path: "", component: BasketsComponent }
+    ])
   ]
 })
 export class BasketsModule { }

@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 
 
-
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -19,7 +18,7 @@ import { MatListModule } from '@angular/material/list';
     RouterModule,
     MatListModule
   ],
-  exports:[
+  exports: [
     HeaderComponent,
     SidebarComponent,
     FooterComponent
