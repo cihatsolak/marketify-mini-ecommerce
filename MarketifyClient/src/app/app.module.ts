@@ -24,7 +24,7 @@ import { AdminModule } from './admin/admin.module';
     HttpClientModule
   ],
   providers: [
-    { provide: "baseUrl", useValue: "https://localhost:7131/api", multi: true }
+    { provide: "baseUrl", useValue: "https://localhost:7028/api", multi: true }
   ],
   bootstrap: [AppComponent]
 })
