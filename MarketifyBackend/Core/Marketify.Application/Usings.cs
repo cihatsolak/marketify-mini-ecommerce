@@ -1,5 +1,7 @@
 ﻿global using FluentValidation;
+global using Marketify.Application.Abstractions.Storage;
 global using Marketify.Application.Exceptions;
+global using Marketify.Application.Repositories.ProductImageFiles;
 global using Marketify.Application.Repositories.Products;
 global using Marketify.Application.ViewModels;
 global using Marketify.Domain.Entities;
