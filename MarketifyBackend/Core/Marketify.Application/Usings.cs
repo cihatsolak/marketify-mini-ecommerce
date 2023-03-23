@@ -1,8 +1,11 @@
 ﻿global using FluentValidation;
 global using Google.Apis.Auth;
+global using Marketify.Application.Abstractions.Services;
+global using Marketify.Application.Abstractions.Services.Authentications;
 global using Marketify.Application.Abstractions.Storage;
 global using Marketify.Application.Abstractions.Tokens;
 global using Marketify.Application.DTOs;
+global using Marketify.Application.DTOs.User;
 global using Marketify.Application.Exceptions;
 global using Marketify.Application.Repositories.ProductImageFiles;
 global using Marketify.Application.Repositories.Products;

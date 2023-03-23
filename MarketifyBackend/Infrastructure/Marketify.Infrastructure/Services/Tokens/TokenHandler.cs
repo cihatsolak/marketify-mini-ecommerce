@@ -9,7 +9,7 @@
             _configuration = configuration;
         }
 
-        public Token CreateAccessToken(int minute)
+        public Token CreateAccessToken(int second)
         {
             Token token = new();
 
@@ -17,7 +17,7 @@
 
             SigningCredentials signingCredentials = new(securityKey, SecurityAlgorithms.HmacSha256);
 
-            token.Expiration = DateTime.UtcNow.AddMinutes(minute);
+            token.Expiration = DateTime.UtcNow.AddMinutes(second);
             JwtSecurityToken securityToken = new(
                 audience: _configuration["Token:Audience"],
                 issuer: _configuration["Token:Issuer"],

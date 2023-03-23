@@ -2,43 +2,28 @@
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
     {
-        private readonly UserManager<AppUser> _userManager;
+        private readonly IUserService _userService;
 
-        public CreateUserCommandHandler(UserManager<AppUser> userManager)
+        public CreateUserCommandHandler(IUserService userService)
         {
-            _userManager = userManager;
+            _userService = userService;
         }
 
         public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
         {
-            AppUser appUser = new()
+            CreateUserResponse response = await _userService.CreateAsync(new()
             {
-                Id = Guid.NewGuid().ToString(),
-                UserName = request.Username,
                 Email = request.Email,
                 NameSurname = request.NameSurname,
+                Password = request.Password,
+                PasswordConfirm = request.PasswordConfirm,
+                Username = request.Username,
+            });
+
+            return new CreateUserCommandResponse(response.Succeeded)
+            {
+                Message = response.Message
             };
-
-            IdentityResult identityResult = await _userManager.CreateAsync(appUser, request.Password);
-
-            CreateUserCommandResponse createUserCommandResponse = new(identityResult.Succeeded);
-
-            if (identityResult.Succeeded)
-            {
-                createUserCommandResponse.Message = "The user has been successfully created.";
-                return createUserCommandResponse;
-            }
-
-            StringBuilder stringBuilder = new();
-
-            foreach (var error in identityResult.Errors)
-            {
-                stringBuilder.AppendLine($"{error.Code} - {error.Description}");
-            }
-
-            createUserCommandResponse.Message = stringBuilder.ToString();
-
-            return createUserCommandResponse;
         }
     }
 }
