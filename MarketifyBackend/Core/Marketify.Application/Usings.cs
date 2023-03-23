@@ -1,5 +1,7 @@
 ﻿global using FluentValidation;
 global using Marketify.Application.Abstractions.Storage;
+global using Marketify.Application.Abstractions.Tokens;
+global using Marketify.Application.DTOs;
 global using Marketify.Application.Exceptions;
 global using Marketify.Application.Repositories.ProductImageFiles;
 global using Marketify.Application.Repositories.Products;
@@ -13,5 +15,6 @@ global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Identity;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
 global using System.Linq.Expressions;
 global using System.Text;
