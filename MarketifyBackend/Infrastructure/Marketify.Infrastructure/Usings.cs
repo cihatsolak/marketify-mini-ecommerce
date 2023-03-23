@@ -1,2 +1,16 @@
-﻿global using Microsoft.AspNetCore.Mvc;
+﻿global using Azure.Storage.Blobs;
+global using Azure.Storage.Blobs.Models;
+global using Marketify.Application.Abstractions.Storage;
+global using Marketify.Application.Abstractions.Storage.Azure;
+global using Marketify.Application.Abstractions.Storage.Local;
+global using Marketify.Infrastructure.Enums;
+global using Marketify.Infrastructure.Operations;
+global using Marketify.Infrastructure.Services.Storage;
+global using Marketify.Infrastructure.Services.Storage.Azure;
+global using Marketify.Infrastructure.Services.Storage.Local;
+global using Microsoft.AspNetCore.Hosting;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Filters;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
