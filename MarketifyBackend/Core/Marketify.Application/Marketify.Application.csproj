@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Marketify.Domain\Marketify.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Queries\" />
-  </ItemGroup>
-
 </Project>
