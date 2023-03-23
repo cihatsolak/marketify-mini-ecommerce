@@ -2,9 +2,10 @@
 {
     public static class ServiceRegistration
     {
-        public static void AddApplicationServices(this IServiceCollection collection)
+        public static void AddApplicationServices(this IServiceCollection services)
         {
-            collection.AddMediatR(typeof(ServiceRegistration));
+            services.AddMediatR(typeof(ServiceRegistration));
+            services.AddHttpClient();
         }
     }
 }

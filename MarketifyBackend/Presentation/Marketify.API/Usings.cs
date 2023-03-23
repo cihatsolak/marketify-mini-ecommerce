@@ -7,6 +7,7 @@ global using Marketify.Application.Features.Commands.Products.CreateProduct;
 global using Marketify.Application.Features.Commands.Products.RemoveProduct;
 global using Marketify.Application.Features.Commands.Products.UpdateProduct;
 global using Marketify.Application.Features.Commands.Users.CreateUser;
+global using Marketify.Application.Features.Commands.Users.FacebookLogin;
 global using Marketify.Application.Features.Commands.Users.GoogleLogin;
 global using Marketify.Application.Features.Commands.Users.LoginUser;
 global using Marketify.Application.Features.Queries.ProductImageFiles.GetProductImages;

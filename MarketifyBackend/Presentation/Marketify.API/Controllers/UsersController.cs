@@ -31,5 +31,12 @@
             GoogleLoginCommandResponse response = await _mediator.Send(googleLoginCommandRequest);
             return Ok(response);
         }
+
+        [HttpPost("facebook-login")]
+        public async Task<IActionResult> FacebookLogin(FacebookLoginCommandRequest facebookLoginCommandRequest)
+        {
+            FacebookLoginCommandResponse response = await _mediator.Send(facebookLoginCommandRequest);
+            return Ok(response);
+        }
     }
 }
