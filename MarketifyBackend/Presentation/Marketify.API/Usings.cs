@@ -10,6 +10,7 @@ global using Marketify.Application.Features.Commands.Users.CreateUser;
 global using Marketify.Application.Features.Commands.Users.FacebookLogin;
 global using Marketify.Application.Features.Commands.Users.GoogleLogin;
 global using Marketify.Application.Features.Commands.Users.LoginUser;
+global using Marketify.Application.Features.Commands.Users.RefreshTokenLogin;
 global using Marketify.Application.Features.Queries.ProductImageFiles.GetProductImages;
 global using Marketify.Application.Features.Queries.Products.GetAllProduct;
 global using Marketify.Application.Features.Queries.Products.GetByIdProduct;

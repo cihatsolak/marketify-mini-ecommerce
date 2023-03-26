@@ -1,4 +1,6 @@
-﻿namespace Marketify.Infrastructure.Services.Tokens
+﻿using System.Security.Cryptography;
+
+namespace Marketify.Infrastructure.Services.Tokens
 {
     public class TokenHandler : ITokenHandler
     {
@@ -28,8 +30,17 @@
 
             JwtSecurityTokenHandler tokenHandler = new();
             token.AccessToken = tokenHandler.WriteToken(securityToken);
+            token.RefreshToken = CreateRefreshToken();
 
             return token;
+        }
+
+        public string CreateRefreshToken()
+        {
+            byte[] number = new byte[32];
+            using RandomNumberGenerator random = RandomNumberGenerator.Create();
+            random.GetBytes(number);
+            return Convert.ToBase64String(number);
         }
     }
 }
