@@ -8,6 +8,7 @@ global using Marketify.Application.DTOs.User;
 global using Marketify.Application.Repositories.ProductImageFiles;
 global using Marketify.Application.Repositories.Products;
 global using Marketify.Application.ViewModels;
+global using Marketify.Application.ViewModels.Baskets;
 global using Marketify.Domain;
 global using Marketify.Domain.Entities;
 global using Marketify.Domain.Entities.Common;
