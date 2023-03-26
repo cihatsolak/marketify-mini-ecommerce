@@ -7,17 +7,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketify.Domain", "Core\Ma
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6D9E586E-C7A8-4500-9852-7F8394A35205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketify.Application", "Core\Marketify.Application\Marketify.Application.csproj", "{12D69032-C3A3-4239-AC1D-0F10F39783D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketify.Application", "Core\Marketify.Application\Marketify.Application.csproj", "{12D69032-C3A3-4239-AC1D-0F10F39783D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B519111B-5A52-405D-A5F1-4C58687C010D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketify.Infrastructure", "Infrastructure\Marketify.Infrastructure\Marketify.Infrastructure.csproj", "{46550E72-AD07-4B48-83BC-39F86809F19D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketify.Infrastructure", "Infrastructure\Marketify.Infrastructure\Marketify.Infrastructure.csproj", "{46550E72-AD07-4B48-83BC-39F86809F19D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketify.Persistence", "Infrastructure\Marketify.Persistence\Marketify.Persistence.csproj", "{BDCDDBAE-43BF-4701-81EF-C51BEE75560A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketify.Persistence", "Infrastructure\Marketify.Persistence\Marketify.Persistence.csproj", "{BDCDDBAE-43BF-4701-81EF-C51BEE75560A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A7A1541D-2870-40EB-8EB2-4BA19B27BB42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketify.API", "Presentation\Marketify.API\Marketify.API.csproj", "{80EA182D-9E1A-4A40-854A-54A1758E9AF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketify.API", "Presentation\Marketify.API\Marketify.API.csproj", "{80EA182D-9E1A-4A40-854A-54A1758E9AF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketify.SignalR", "Infrastructure\Marketify.SignalR\Marketify.SignalR.csproj", "{06950EEC-A5BD-4704-ABE6-FC582EBBC496}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{80EA182D-9E1A-4A40-854A-54A1758E9AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80EA182D-9E1A-4A40-854A-54A1758E9AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80EA182D-9E1A-4A40-854A-54A1758E9AF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06950EEC-A5BD-4704-ABE6-FC582EBBC496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06950EEC-A5BD-4704-ABE6-FC582EBBC496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06950EEC-A5BD-4704-ABE6-FC582EBBC496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06950EEC-A5BD-4704-ABE6-FC582EBBC496}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{46550E72-AD07-4B48-83BC-39F86809F19D} = {B519111B-5A52-405D-A5F1-4C58687C010D}
 		{BDCDDBAE-43BF-4701-81EF-C51BEE75560A} = {B519111B-5A52-405D-A5F1-4C58687C010D}
 		{80EA182D-9E1A-4A40-854A-54A1758E9AF3} = {A7A1541D-2870-40EB-8EB2-4BA19B27BB42}
+		{06950EEC-A5BD-4704-ABE6-FC582EBBC496} = {B519111B-5A52-405D-A5F1-4C58687C010D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3082A9EF-3EC4-47CD-A240-A71F85FB9F53}

@@ -24,6 +24,7 @@
     <ProjectReference Include="..\..\Core\Marketify.Application\Marketify.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Marketify.Infrastructure\Marketify.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Marketify.Persistence\Marketify.Persistence.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Marketify.SignalR\Marketify.SignalR.csproj" />
   </ItemGroup>
 
 </Project>

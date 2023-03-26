@@ -1,4 +1,5 @@
 ﻿global using FluentValidation;
+global using Marketify.Application.Abstractions.Hubs;
 global using Marketify.Application.Abstractions.Services;
 global using Marketify.Application.Abstractions.Services.Authentications;
 global using Marketify.Application.Abstractions.Storage;
