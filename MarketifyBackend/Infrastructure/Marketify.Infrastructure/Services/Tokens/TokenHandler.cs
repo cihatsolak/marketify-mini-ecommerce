@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography;
+﻿using System.Security.Claims;
 
 namespace Marketify.Infrastructure.Services.Tokens
 {
@@ -11,7 +11,7 @@ namespace Marketify.Infrastructure.Services.Tokens
             _configuration = configuration;
         }
 
-        public Token CreateAccessToken(int second)
+        public Token CreateAccessToken(int second, AppUser appUser)
         {
             Token token = new();
 
@@ -25,7 +25,8 @@ namespace Marketify.Infrastructure.Services.Tokens
                 issuer: _configuration["Token:Issuer"],
                 expires: token.Expiration,
                 notBefore: DateTime.UtcNow,
-                signingCredentials: signingCredentials
+                signingCredentials: signingCredentials,
+                claims: new List<Claim> { new(ClaimTypes.Name, appUser.UserName) }
                 );
 
             JwtSecurityTokenHandler tokenHandler = new();
