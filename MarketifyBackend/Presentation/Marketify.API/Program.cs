@@ -1,3 +1,5 @@
+using Marketify.API.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistenceServices();
@@ -86,6 +88,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors();
 app.UseHttpsRedirection();
+
+app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
 
 app.UseSerilogRequestLogging();
 app.UseHttpLogging();
