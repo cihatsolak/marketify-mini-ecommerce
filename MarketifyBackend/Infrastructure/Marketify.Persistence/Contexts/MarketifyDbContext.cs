@@ -20,6 +20,10 @@
             modelBuilder.Entity<Order>()
                 .HasKey(b => b.Id);
 
+            modelBuilder.Entity<Order>()
+               .HasIndex(o => o.OrderCode)
+               .IsUnique();
+
             modelBuilder.Entity<Basket>()
                 .HasOne(b => b.Order)
                 .WithOne(o => o.Basket)
