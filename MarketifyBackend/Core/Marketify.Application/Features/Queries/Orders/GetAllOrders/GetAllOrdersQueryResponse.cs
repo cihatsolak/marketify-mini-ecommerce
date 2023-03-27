@@ -1,4 +1,4 @@
-﻿namespace Marketify.Application.Features.Queries.Orders
+﻿namespace Marketify.Application.Features.Queries.Orders.GetAllOrders
 {
     public class GetAllOrdersQueryResponse
     {
