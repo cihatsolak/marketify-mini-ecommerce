@@ -2,10 +2,11 @@
 {
     public static class ServiceRegistration
     {
-        public static void AddSignalRServices(this IServiceCollection collection)
+        public static void AddSignalRServices(this IServiceCollection services)
         {
-            collection.AddTransient<IProductHubService, ProductHubService>();
-            collection.AddSignalR();
+            services.AddTransient<IProductHubService, ProductHubService>();
+            services.AddTransient<IOrderHubService, OrderHubService>();
+            services.AddSignalR();
         }
     }
 }

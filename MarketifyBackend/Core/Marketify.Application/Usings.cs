@@ -4,6 +4,7 @@ global using Marketify.Application.Abstractions.Services;
 global using Marketify.Application.Abstractions.Services.Authentications;
 global using Marketify.Application.Abstractions.Storage;
 global using Marketify.Application.DTOs;
+global using Marketify.Application.DTOs.Orders;
 global using Marketify.Application.DTOs.User;
 global using Marketify.Application.Repositories.ProductImageFiles;
 global using Marketify.Application.Repositories.Products;

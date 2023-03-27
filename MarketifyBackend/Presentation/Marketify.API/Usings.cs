@@ -6,6 +6,7 @@ global using Marketify.Application;
 global using Marketify.Application.Features.Commands.Baskets.AddItemToBasket;
 global using Marketify.Application.Features.Commands.Baskets.RemoveBasketItem;
 global using Marketify.Application.Features.Commands.Baskets.UpdateQuantity;
+global using Marketify.Application.Features.Commands.Orders.CreateOrder;
 global using Marketify.Application.Features.Commands.ProductImageFiles.RemoveProductImage;
 global using Marketify.Application.Features.Commands.ProductImageFiles.UpdateProductImage;
 global using Marketify.Application.Features.Commands.Products.CreateProduct;

@@ -2,13 +2,13 @@
 {
     public class BasketService : IBasketService
     {
-        readonly IHttpContextAccessor _httpContextAccessor;
-        readonly UserManager<AppUser> _userManager;
-        readonly IOrderReadRepository _orderReadRepository;
-        readonly IBasketWriteRepository _basketWriteRepository;
-        readonly IBasketReadRepository _basketReadRepository;
-        readonly IBasketItemWriteRepository _basketItemWriteRepository;
-        readonly IBasketItemReadRepository _basketItemReadRepository;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly IOrderReadRepository _orderReadRepository;
+        private readonly IBasketWriteRepository _basketWriteRepository;
+        private readonly IBasketReadRepository _basketReadRepository;
+        private readonly IBasketItemWriteRepository _basketItemWriteRepository;
+        private readonly IBasketItemReadRepository _basketItemReadRepository;
 
         public BasketService(
             IHttpContextAccessor httpContextAccessor, 
@@ -112,6 +112,15 @@
             {
                 _basketItem.Quantity = basketItem.Quantity;
                 await _basketItemWriteRepository.SaveAsync();
+            }
+        }
+
+        public Basket GetUserActiveBasket
+        {
+            get
+            {
+                Basket basket = ContextUser().Result;
+                return basket;
             }
         }
     }
