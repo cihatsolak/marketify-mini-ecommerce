@@ -14,7 +14,6 @@ namespace Marketify.Persistence
                 options.UseNpgsql(configuration.GetConnectionString(nameof(MarketifyDbContext)));
             });
 
-
             services.AddIdentity<AppUser, AppRole>(options =>
             {
                 options.Password.RequiredLength = 3;
@@ -22,7 +21,9 @@ namespace Marketify.Persistence
                 options.Password.RequireDigit = false;
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
-            }).AddEntityFrameworkStores<MarketifyDbContext>();
+            })
+            .AddEntityFrameworkStores<MarketifyDbContext>()
+            .AddDefaultTokenProviders();
 
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();

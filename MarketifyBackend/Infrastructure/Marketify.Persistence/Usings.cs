@@ -6,6 +6,7 @@ global using Marketify.Application.DTOs;
 global using Marketify.Application.DTOs.Orders;
 global using Marketify.Application.DTOs.User;
 global using Marketify.Application.Exceptions;
+global using Marketify.Application.Extensions;
 global using Marketify.Application.Repositories;
 global using Marketify.Application.Repositories.BasketItems;
 global using Marketify.Application.Repositories.Baskets;
