@@ -4,13 +4,19 @@
     {
         private readonly IOrderWriteRepository _orderWriteRepository;
         private readonly IOrderReadRepository _orderReadRepository;
+        private readonly ICompletedOrderWriteRepository _completedOrderWriteRepository;
+        private readonly ICompletedOrderReadRepository _completedOrderReadRepository;
 
         public OrderService(
             IOrderWriteRepository orderWriteRepository, 
-            IOrderReadRepository orderReadRepository)
+            IOrderReadRepository orderReadRepository, 
+            ICompletedOrderWriteRepository completedOrderWriteRepository, 
+            ICompletedOrderReadRepository completedOrderReadRepository)
         {
             _orderWriteRepository = orderWriteRepository;
             _orderReadRepository = orderReadRepository;
+            _completedOrderWriteRepository = completedOrderWriteRepository;
+            _completedOrderReadRepository = completedOrderReadRepository;
         }
 
         public async Task CreateOrderAsync(CreateOrder createOrder)
@@ -75,6 +81,27 @@
                 Description = data.Description,
                 OrderCode = data.OrderCode
             };
+        }
+
+        public async Task<(bool, CompletedOrderDTO)> CompleteOrderAsync(string id)
+        {
+            Order order = await _orderReadRepository.Table
+                .Include(o => o.Basket)
+                .ThenInclude(b => b.User)
+                .FirstOrDefaultAsync(o => o.Id == Guid.Parse(id));
+
+            if (order != null)
+            {
+                await _completedOrderWriteRepository.AddAsync(new() { OrderId = Guid.Parse(id) });
+                return (await _completedOrderWriteRepository.SaveAsync() > 0, new()
+                {
+                    OrderCode = order.OrderCode,
+                    OrderDate = order.CreatedDate,
+                    Username = order.Basket.User.UserName,
+                    EMail = order.Basket.User.Email
+                });
+            }
+            return (false, null);
         }
     }
 }

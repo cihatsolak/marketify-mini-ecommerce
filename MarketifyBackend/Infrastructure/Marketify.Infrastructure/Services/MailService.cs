@@ -52,5 +52,12 @@
 
             await SendMailAsync(to, "Password Renewal Request", mail.ToString());
         }
+
+        public async Task SendCompletedOrderMailAsync(string to, string orderCode, DateTime orderDate, string userName)
+        {
+            string mail = $"Dear {userName} Hello<br>Your order with {orderCode} code on {orderDate} has been completed and given to the shipping company.";
+
+            await SendMailAsync(to, $"Your Order with Order Number {orderCode} is Completed.", mail);
+        }
     }
 }
