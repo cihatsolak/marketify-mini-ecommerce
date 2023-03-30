@@ -18,6 +18,9 @@ global using Marketify.Application.Features.Commands.ProductImageFiles.UpdatePro
 global using Marketify.Application.Features.Commands.Products.CreateProduct;
 global using Marketify.Application.Features.Commands.Products.RemoveProduct;
 global using Marketify.Application.Features.Commands.Products.UpdateProduct;
+global using Marketify.Application.Features.Commands.Roles.CreateRole;
+global using Marketify.Application.Features.Commands.Roles.DeleteRole;
+global using Marketify.Application.Features.Commands.Roles.UpdateRole;
 global using Marketify.Application.Features.Commands.Users.CreateUser;
 global using Marketify.Application.Features.Commands.Users.FacebookLogin;
 global using Marketify.Application.Features.Commands.Users.GoogleLogin;
@@ -32,6 +35,8 @@ global using Marketify.Application.Features.Queries.Orders.GetOrderById;
 global using Marketify.Application.Features.Queries.ProductImageFiles.GetProductImages;
 global using Marketify.Application.Features.Queries.Products.GetAllProduct;
 global using Marketify.Application.Features.Queries.Products.GetByIdProduct;
+global using Marketify.Application.Features.Queries.Roles.GetRoleById;
+global using Marketify.Application.Features.Queries.Roles.GetRoles;
 global using Marketify.Application.Validators.Products;
 global using Marketify.Infrastructure;
 global using Marketify.Infrastructure.Filters;
