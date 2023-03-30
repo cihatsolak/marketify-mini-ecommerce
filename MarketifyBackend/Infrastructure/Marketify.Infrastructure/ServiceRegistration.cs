@@ -2,11 +2,12 @@
 {
     public static class ServiceRegistration
     {
-        public static void AddInfrastructureServices(this IServiceCollection serviceCollection)
+        public static void AddInfrastructureServices(this IServiceCollection services)
         {
-            serviceCollection.AddScoped<IStorageService, StorageService>();
-            serviceCollection.AddScoped<ITokenHandler, Services.Tokens.TokenHandler>();
-            serviceCollection.AddScoped<IMailService, MailService>();
+            services.AddScoped<IStorageService, StorageService>();
+            services.AddScoped<ITokenHandler, Services.Tokens.TokenHandler>();
+            services.AddScoped<IMailService, MailService>();
+            services.AddScoped<IApplicationService, ApplicationService>();
         }
 
         public static void AddStorage<T>(this IServiceCollection serviceCollection) where T : Storage, IStorage
