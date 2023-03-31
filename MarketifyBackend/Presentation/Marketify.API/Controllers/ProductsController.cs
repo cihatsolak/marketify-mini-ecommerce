@@ -6,10 +6,14 @@
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IProductService _productService;
 
-        public ProductsController(IMediator mediator)
+        public ProductsController(
+            IMediator mediator, 
+            IProductService productService)
         {
             _mediator = mediator;
+            _productService = productService;
         }
 
         [HttpGet]
@@ -17,6 +21,13 @@
         {
             GetAllProductQueryResponse response = await _mediator.Send(getAllProductQueryRequest);
             return Ok(response);
+        }
+
+        [HttpGet("qrcode/{productId}")]
+        public async Task<IActionResult> GetQrCodeToProduct([FromRoute] string productId)
+        {
+            var data = await _productService.QrCodeToProductAsync(productId);
+            return File(data, "image/png");
         }
 
         [HttpGet("{Id}")]
