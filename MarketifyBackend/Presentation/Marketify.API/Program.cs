@@ -1,3 +1,5 @@
+using Marketify.API.Filters;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpContextAccessor();
@@ -29,6 +31,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add<ValidationFilter>();
+    options.Filters.Add<RolePermissionFilter>();
 })
 .ConfigureApiBehaviorOptions(options =>
 {
