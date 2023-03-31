@@ -1,4 +1,6 @@
-﻿namespace Marketify.API.Controllers
+﻿using Marketify.Application.Features.Queries.Products.UpdateStockQrCodeToProduct;
+
+namespace Marketify.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -28,6 +30,13 @@
         {
             var data = await _productService.QrCodeToProductAsync(productId);
             return File(data, "image/png");
+        }
+
+        [HttpPut("qrcode")]
+        public async Task<IActionResult> UpdateStockQrCodeToProduct(UpdateStockQrCodeToProductCommandRequest updateStockQrCodeToProductCommandRequest)
+        {
+            UpdateStockQrCodeToProductCommandResponse response = await _mediator.Send(updateStockQrCodeToProductCommandRequest);
+            return Ok(response);
         }
 
         [HttpGet("{Id}")]
